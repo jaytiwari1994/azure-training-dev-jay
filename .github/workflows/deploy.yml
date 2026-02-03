@@ -26,10 +26,10 @@ jobs:
         php-version: '8.4'
 
     - name: Check for Syntax Errors
-      run: php -l order.php
+      run: php -l index.php
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'your-azure-app-name' # Replace with your actual App Name
+        app-name: 'WA-APP-TRAINING-DEV' # Replace with your actual App Name
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
