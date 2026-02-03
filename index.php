@@ -36,7 +36,7 @@ if (isset($_POST['load_image'])) {
 </head>
 <body>
 
-<h2>Load Image from Azure Blob Storage main4</h2>
+<h2>Load Image from Azure Blob Storage main6</h2>
 
 <form method="post">
     <button type="submit" name="load_image">
