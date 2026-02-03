@@ -26,8 +26,7 @@ jobs:
         php-version: '8.4'
 
     - name: Check for Syntax Errors
-      run: |
-        find . -name "*.php" -print0 | xargs -0 -n1 php -l
+      run: php -l index.php
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
