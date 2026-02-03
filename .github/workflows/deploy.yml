@@ -1,0 +1,35 @@
+name: Deploy PHP App
+
+on:
+  push:
+    branches:
+      - main  # Runs every time you push to the 'main' branch
+
+  workflow_dispatch:
+   inputs:
+    branch:
+      description: 'Branch to deploy'
+      required: false
+      default: 'main'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.4'
+
+    - name: Check for Syntax Errors
+      run: php -l order.php
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'your-azure-app-name' # Replace with your actual App Name
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
