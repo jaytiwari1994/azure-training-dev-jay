@@ -5,6 +5,13 @@ on:
     branches:
       - main  # Runs every time you push to the 'main' branch
 
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: false
+        default: 'main'
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
