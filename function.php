@@ -43,7 +43,7 @@
 	<div class="box">
 		<h1>Place Order for silver coins*</h1>
 		<h3>*each coin is of 10 gram</h3>
-		<h3>*rdered quantity should be between 0 to 5</h3>
+		<h3>*ordered quantity should be between 0 to 5</h3>
 		<form id="orderForm" method="POST" onsubmit="generateID()">
 			<input type="hidden" name="generatedOrderId" id="generatedOrderId">
 			
