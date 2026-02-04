@@ -2,7 +2,7 @@
 // ============================
 // Read Environment Variables
 // ============================
-$accountName = getenv('STORAGE_ACCOUNT_NAME');
+$accountName = getenv('STORAGE_ACCOUNT_NAME')
 $container   = getenv('STORAGE_CONTAINER');
 $blobPath    = getenv('STORAGE_BLOB_PATH');
 $sasToken    = getenv('STORAGE_SAS_TOKEN');
@@ -36,7 +36,7 @@ if (isset($_POST['load_image'])) {
 </head>
 <body>
 
-<h2>Load Image from Azure Blob Storage main8</h2>
+<h2>Load Image from Azure Blob Storage mai</h2>
 
 <form method="post">
     <button type="submit" name="load_image">
